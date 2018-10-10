@@ -2,23 +2,37 @@
 #include <stdlib.h>
 #include <locale.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* autor: Gabriel Jorge
+	problema: Crie um algoritmo que receba
+	 o nome  do aluno e suas 4 notas bimestrais,
+	 calcule e apresente a média anual desse aluno.
+
+*/ 
+
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	float n1, n2, n3, n4, media;
 	char nome[10];
+	printf("========= Cálculo de Média ===========\n");
 	printf("Digite se nome: ");
 	scanf("%s",&nome);
-	printf("Digite o valor da primeira nota: \n");
+	printf("Digite a nota do primeiro Bimestre: \n");
 	scanf("%f",&n1);
-	printf("Digite o valor da primeira nota: \n");
+	printf("Digite a nota do Segundo Bimestre: \n");
 	scanf("%f",&n2);
-	printf("Digite o valor da primeira nota: \n");
+	printf("Digite a nota do Terceiro Bimestre: \n");
 	scanf("%f",&n3);
-	printf("Digite o valor da primeira nota: \n");
+	printf("Digite a nota do Quarto Bimestre: \n");
 	scanf("%f",&n4);
 	media = (n1 + n2 + n3 + n4) / 4;
-	printf("%s, sua média é %f \n",nome,media);
+	if (media < 5) {
+	printf("%s, sua média anual é %2.f, você foi reprovado \n",nome,media);
+	}
+	else if (media == 5) {
+			printf("%s, sua média anual é %2.f, você está em recuperação \n",nome,media);
+	}
+	else 
+			printf("%s, sua média anual é %2.f, você foi aprovado \n",nome,media);
 	return 0;
 }
