@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
   setlocale(LC_ALL, "Portuguese");
   float base, altura, area;
   
-  printf("========== Cálculo de área do Triângulo =============")
+  printf("========== Cálculo de área do Triângulo ============= /n")
   printf("Digite o valor da base: ");
   scanf("%f", &base);
   printf("Digite o valor da altura: ");
