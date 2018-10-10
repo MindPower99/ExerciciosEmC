@@ -17,7 +17,7 @@ int main() {
 	printf("Digite outro número: \n");
 	scanf("%f",&n2);
 	soma = n1 + n2;
-	printf("A soma dos números é %f \n",soma);
+	printf("A soma dos números é %2.f \n",soma);
 	system("PAUSE");
 	return 0;
 }
