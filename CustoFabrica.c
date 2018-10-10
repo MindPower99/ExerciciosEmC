@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <locale.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* autor: Gabriel Jorge
+	problema: Escreva um algoritmo que leia o custo de fábrica
+	e apresente o preço final.
+*/ 
+
 
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	float custocons, custofabr;
+	printf("========== Calcular custo do consumidor ============\n");
 	printf("Digite o custo de fábrica em R$ \n");
 	scanf("%f",&custofabr);
 	if (custofabr > 10000.00) {
