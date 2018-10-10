@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
+
+ /* autor: Gabriel Jorge
+	problema: Construa um algoritmo para calcular e apresentar
+	 X1 e X2 da equação do 2º grau e explique o funcionamento
+*/ 
+
+
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
