@@ -3,7 +3,11 @@
 #include <locale.h>
 #include <string.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* autor: Gabriel Jorge
+	      problema: Crie um algoritmo que guarde
+          uma senha e depois a compare dizendo
+          se é válida ou não.
+*/ 
 
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL,"Portuguese");
