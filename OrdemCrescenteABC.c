@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <locale.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* 	Autor: Gabriel Nascimento
+	Problema: Crie um programa que receba 3 valores: A, B e C, e apresente-os na ordem crescente */
 
 int main(int argc, char *argv[]) {
 	setlocale (LC_ALL, "Portuguese");
 	float A,B,C;
+	printf("===========Comparando os Valores e os exibindo em Ordem Crescente ===============\n");
 	printf("Digite o valor de A: \n");
 	scanf("%f",&A);
 	printf("Digite o valor de B: \n");
@@ -16,41 +18,41 @@ int main(int argc, char *argv[]) {
 	
 	if (A < B && A < C) {
 		if(B < C) {
-			printf(A);
-			printf(B);
-			printf(C);
+			printf("%2.f \n",A);
+			printf("%2.f \n",B);
+			printf("%2.f \n",C);
 		}
 		else {
-			printf(A);
-			printf(C);
-			printf(B);
+			printf("%2.f \n",A);
+			printf("%2.f \n",C);
+			printf("%2.f \n",B);
 		}
 	}
 	
-	else 
+	else  
 		if(B < A && B < C) {
 			if(A < C) {
-				printf(B);
-				printf(A);
-				printf(C);
+				printf("%2.f \n",B);
+				printf("%2.f \n",A);
+				printf("%2.f \n",C);
 			}
 			else {
-				printf(B);
-				printf(C);
-				printf(A);
+				printf("%2.f \n",B);
+				printf("%2.f \n",C);
+				printf("%2.f \n",A);
 			}
-		
-		else
+	}
+		else {
 			if (A < B) {
-				printf(C);
-				printf(A);
-				printf(B);
+				printf("%2.f \n",C);
+				printf("%2.f \n",A);
+				printf("%2.f \n",B);
 			}
 			
 			else {
-				printf(C);
-				printf(B);
-				printf(A);
+				printf("%2.f \n",C);
+				printf("%2.f \n",B);
+				printf("%2.f \n",A);
 			}
 		}
 	return 0;
