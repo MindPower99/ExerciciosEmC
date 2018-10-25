@@ -14,7 +14,7 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	int opcao;
-	printf("================MC Donald's");
+	printf("================MC Donald's ===============");
 	printf("Digite o número correspondente ao lanche desejado: \n 1 - BigMac \n 2 - Quarteirão \n 3 - MacChicken \n 4 - Cheddar MacMelt \n 5 - MacMax \n");
 	scanf("%d",&opcao);
 	
