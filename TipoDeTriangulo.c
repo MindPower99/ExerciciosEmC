@@ -21,21 +21,20 @@ int main(int argc, char *argv[])
   puts("Digite o valor do lado C: ");
   scanf("%f",&C);
   
-  if((A == B && A == C && B != C) || (A == B && A != C && B == C ) || (A != B && A == C && B == C)) {
-       puts("Triângulo Isósceles.");     
-  }
-  
-  else if(A != B && A != C && B != C) {
-       puts("Triângulo Escaleno.");     
-  } 
-  
-  else if (A == B && A == C && B == C) {
-       puts("Triângulo Equilátero.");     
-  }
-  
-  else if (A > B+C || B > A+C || C > B+A && A < B-C || B < A-C || C < A-B) {
-       puts("Não forma um triângulo.");     
-  }
+  if (A + B >= C && A + C >= B && B + C >= A)
+         {
+          if (A == B && B == C && C == A){
+             puts ("Triangulo Equilatero \n");
+             }
+          else if (A == B || B == C || C == A){
+             puts ("Triangulo Isosceles \n");
+             }
+          else if (A != B && B != C && C != A){
+             puts ("Triangulo Escaleno \n");
+             }
+         }
+      else
+          printf ("Valores invalidos para formar um triangulo");
        
   
   system("PAUSE");	
