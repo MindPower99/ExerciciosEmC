@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	float imc, peso, altura;
 	int i = 1,opcao;
-	puts("==========Cálculo de IMC com laço de repetição ==========\n\n");
+	puts("==========Cálculo de IMC com laço de repetição ==========\n");
 	
 	while (i < 2) {
 		puts("Informe seu peso: \n");
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 		 }
 		
 		puts("Deseja continuar o cálculo ? \n 1 - sim \n 2 - não");
-		scanf("%f",&opcao);
+		scanf("%d",&opcao);
 		
 		if(opcao == 1) {
 			puts("continuando...\n");
