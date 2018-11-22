@@ -23,34 +23,34 @@ int main(int argc, char *argv[]) {
 			
 		switch(opcao) {
 			case 1: 
-				puts("1 - Bic Mac.");
+				puts("1 - Bic Mac. \n");
 				break;
 				
 			case 2: 
-				puts("2 - Quarteirão. ");
+				puts("2 - Quarteirão. \n");
 				break;
 				
 			case 3: 
-				puts("3 - MacChicken. ");
+				puts("3 - MacChicken. \n");
 				break;
 			
 			case 4: 
-				puts("4 - Cheddar MacMelt. ");
+				puts("4 - Cheddar MacMelt. \n");
 				break;
 				
 			case 5: 
-				puts("5 - MacMax. ");
+				puts("5 - MacMax. \n");
 				break;
 				
 			default: 
-				puts("opção Inválida.");
+				puts("opção Inválida. \n");
 		}
 		
 		puts("Deseja continuar ? \n 1 - Sim \n 2 - Não \n");
 		scanf("%d",&resp);
 		
 		if(resp == 1) {
-			puts ("Continuando...");			
+			puts ("Continuando...\n");			
 		}
 		
 		else {
