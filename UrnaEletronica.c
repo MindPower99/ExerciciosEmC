@@ -7,30 +7,42 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
 	puts("=============Eleições para presidente =============\n");
-	int opcao,voto,bolsonaro, haddad, Ciro, Amoedo,i;
+	int opcao,voto,bolsonaro, haddad, Ciro, Amoedo, Marina, Alckimin,Alvaro,i;
 	do {
-		puts("Digite o número correspondente a seu candidato: \n 1 - Bolsonaro \n 2 - Haddad \n 3 - Ciro \n 4 - Amoedo \n");
+		puts("Digite o número correspondente a seu candidato: \n 1 - Bolsonaro \n 2 - Haddad \n 3 - Ciro \n 4 - Amoedo \n 5 - Marina \n 6 - Alckimin \n 7 - Álvaro Dias \n 8 - Boulos \n 9 - Daciolo \n");
 		scanf("%d",&voto);
 		
 		switch(voto) {
-			case 1:
-				bolsonaro += 1;
-				break;
-				
-			case 2: 
-				haddad += 1;
-				break;
-				
-			case 3:
-				Ciro += 1;
-				break;
-				
-			case 4:
-				Amoedo += 1;
-				break;
-				
-			default: 
-				puts("Digite uma opção válida \n");
+    			case 1:
+    				bolsonaro += 1;
+    				break;
+    				
+    			case 2: 
+    				haddad += 1;
+    				break;
+    				
+    			case 3:
+    				Ciro += 1;
+    				break;
+    				
+    			case 4:
+    				Amoedo += 1;
+    				break;
+    				
+    			case 5:
+                     Marina += 1;
+                     break;
+                 
+                 case 6:
+                      Alckimin +=1;
+                      break;
+                      
+                 case 7:
+                      Alvaro +=1;
+                      break;
+                      	
+    			default: 
+    				puts("Digite uma opção válida \n");
 		}
 		
 		puts("Deseja continuar a votação ? \n 1 - Sim \n 2 - Não");
