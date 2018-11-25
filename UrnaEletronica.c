@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
 	puts("=============Eleições para presidente =============\n");
-	int opcao,voto,bolsonaro, haddad, Ciro, Amoedo, Marina, Alckimin,Alvaro, Boulos, Daciolo,i1 = 0,i2 = 0,certeza;
+	int opcao,voto,bolsonaro, haddad, Ciro, Amoedo, Marina, Alckimin,Alvaro, Boulos, Daciolo,i1 = 0,i2 = 0,certeza,limiterros = 0;
 	char SenhaMesario[] = "senhamesario";
 	char SenhaChefeDeUrna[] = "senhachefedeurna";
 
@@ -19,43 +19,36 @@ int main(int argc, char *argv[]) {
     			case 1:
     				bolsonaro += 1;
     				puts("Seu voto foi computado ! \n");
-    				i2++;
     				break;
     				
     			case 2: 
     				haddad += 1;
     				puts("Seu voto foi computado ! \n");
-    				i2++;
     				break;
     				
     			case 3:
     				Ciro += 1;
     				puts("Seu voto foi computado ! \n");
-    				i2++;
     				break;
     				
     			case 4:
     				Amoedo += 1;
     				puts("Seu voto foi computado ! \n");
-    				i2++;
     				break;
     				
     			case 5:
                      Marina += 1;
                      puts("Seu voto foi computado ! \n");
-                     i2++;
                      break;
                  
                  case 6:
                       Alckimin +=1;
                       puts("Seu voto foi computado ! \n");
-                      i2++;
                       break;
                       
                  case 7:
                       Alvaro +=1;
                       puts("Seu voto foi computado ! \n");
-                      i2++;
                       break;
                       
                  case 8:
@@ -74,20 +67,33 @@ int main(int argc, char *argv[]) {
                       
                       if (certeza == 1) {
                                   char SenhaM[15];
-                                  puts("Digite sua senha: ");
+                                  do {
+                                  puts("Digite sua senha, para encerrar a votação: ");
                                   scanf("%s",&SenhaM);
+                                  
                                   
                                   if (strcmp(SenhaM,SenhaMesario)==0) {
                                      puts("Encerrando a votação..\n");
                                      i2++;           
                                   }
                                   else {
-                                       puts("Senha incorreta.\n");     
+                                       puts("Senha incorreta.\n");
+                                       limiterros++;     
                                   }
-                              }
+                                  
+                                  } while (limiterros < 3 && i2 == 0);
+                      }
+                                          
+                      else if (certeza == 2) {
+                           puts("Voltando com a votação..\n");
+                      }
+                                  
+                      else if (certeza != 1 && certeza != 2) {
+                           puts("Digite uma opção válida..\n");     
+                      }
                       
-                      
-                      	
+                      break;
+                                   	
     			default: 
     				puts("Digite uma opção válida \n"); 
    				}
