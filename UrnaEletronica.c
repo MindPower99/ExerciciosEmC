@@ -166,6 +166,51 @@ int main(int argc, char *argv[]) {
           				          puts("Aperte '0' para retornar para a votação");
           				          scanf("%d",&caso11);
                               }
+                              
+                              else if (Marina > bolsonaro && Marina > haddad && Marina > Ciro && Marina > Amoedo && Marina > Alckimin && Marina > Alvaro && Marina > Boulos && Marina > Daciolo) {
+                              		printf("Marina é a vencedora ! \n\n");
+           				         	printf("Jair Bolsonaro = %d \n",bolsonaro);
+	                                printf("Fernando Haddad = %d \n",haddad);
+	          				        printf("Ciro Gomes = %d \n",Ciro);
+	          				        printf("João Amoedo = %d \n",Amoedo);
+	          				        printf("Marina Silva = %d \n",Marina);
+	          				        printf("Geraldo Alckimin = %d \n",Alckimin);
+	          				        printf("Álvaro Dias = %d \n",Alvaro);
+	          				        printf("Guilherme Boulos = %d \n",Boulos);
+	          				        printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+	          				        puts("Aperte '0' para retornar para a votação");
+	          				    	scanf("%d",&caso11);
+							  }
+							  
+							  else if (Alckimin > bolsonaro && Alckimin > haddad && Alckimin > Ciro && Alckimin >  Amoedo && Alckimin > Marina && Alckimin > Alvaro && Alckimin > Boulos && Alckimin > Daciolo) {
+							  		printf("Alckimin é o vencedor ! \n\n");
+           				         	printf("Jair Bolsonaro = %d \n",bolsonaro);
+	                                printf("Fernando Haddad = %d \n",haddad);
+	          				        printf("Ciro Gomes = %d \n",Ciro);
+	          				        printf("João Amoedo = %d \n",Amoedo);
+	          				        printf("Marina Silva = %d \n",Marina);
+	          				        printf("Geraldo Alckimin = %d \n",Alckimin);
+	          				        printf("Álvaro Dias = %d \n",Alvaro);
+	          				        printf("Guilherme Boulos = %d \n",Boulos);
+	          				        printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+	          				        puts("Aperte '0' para retornar para a votação");
+	          				    	scanf("%d",&caso11);
+							  }
+							  
+							  else if (Alvaro > bolsonaro && Alvaro > haddad && Alvaro > Ciro && Alvaro > Amoedo && Alvaro > Marina && Alvaro > Alckimin && Alvaro > Boulos && Alvaro > Daciolo) {
+							  		printf("Alckimin é o vencedor ! \n\n");
+           				         	printf("Jair Bolsonaro = %d \n",bolsonaro);
+	                                printf("Fernando Haddad = %d \n",haddad);
+	          				        printf("Ciro Gomes = %d \n",Ciro);
+	          				        printf("João Amoedo = %d \n",Amoedo);
+	          				        printf("Marina Silva = %d \n",Marina);
+	          				        printf("Geraldo Alckimin = %d \n",Alckimin);
+	          				        printf("Álvaro Dias = %d \n",Alvaro);
+	          				        printf("Guilherme Boulos = %d \n",Boulos);
+	          				        printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+	          				        puts("Aperte '0' para retornar para a votação");
+	          				    	scanf("%d",&caso11);
+							  }
             			 
             			 
                                                                  
