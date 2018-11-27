@@ -8,13 +8,13 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
 	puts("=============Eleições para presidente =============\n");
-	int opcao,voto,bolsonaro = 0, haddad = 0, Ciro = 0, Amoedo = 0, Marina = 0, Alckimin = 0,Alvaro = 0, Boulos = 0, Daciolo = 0,i1 = 0,i2 = 0,certeza,limiterros = 0;
+	int opcao,voto,bolsonaro = 0, haddad = 0, Ciro = 0, Amoedo = 0, Marina = 0, Alckimin = 0,Alvaro = 0, Boulos = 0, Daciolo = 0,i1 = 0,i2 = 0,certeza,limiterros = 0,caso10, caso11;
 	char SenhaMesario[] = "senhamesario";
 	char SenhaChefeDeUrna[] = "senhachefedeurna";
 	char SenhaC[25];
 
 	do {
-		puts("Digite o número correspondente a seu candidato: \n 1 - Bolsonaro \n 2 - Haddad \n 3 - Ciro \n 4 - Amoedo \n 5 - Marina \n 6 - Alckimin \n 7 - Álvaro Dias \n 8 - Boulos \n 9 - Daciolo \n");
+		puts("\n\nDigite o número correspondente a seu candidato: \n 1 - Bolsonaro \n 2 - Haddad \n 3 - Ciro \n 4 - Amoedo \n 5 - Marina \n 6 - Alckimin \n 7 - Álvaro Dias \n 8 - Boulos \n 9 - Daciolo \n");
 		scanf("%d",&voto);
 		switch(voto) {
     			case 1:
@@ -74,23 +74,29 @@ int main(int argc, char *argv[]) {
                                   
                                   
                                   if (strcmp(SenhaM,SenhaMesario)==0) {
-                                     puts("Encerrando a votação..\n");
+                                     puts("Encerrando a votação ! Aperte '0' para confirmar.. \n");
+                                     scanf("%d",&caso10);  
                                      i2++;           
                                   }
                                   else {
                                        puts("Senha incorreta.\n");
-                                       limiterros++;     
+                                       limiterros++;
+                                       puts("Você tem apenas 3 chances ao todo / aperte '0' pra retornar a votação");
+                                       scanf("%d",&caso10);    
                                   }
                                   
                                   } while (limiterros < 3 && i2 == 0);
                       }
                                           
                       else if (certeza == 2) {
-                           puts("Voltando com a votação..\n");
+                           puts("Voltando com a votação ! Tecle '0' para continuar..\n");
+                           scanf("%d",&caso10);
                       }
                                   
                       else if (certeza != 1 && certeza != 2) {
-                           puts("Digite uma opção válida..\n");     
+                           puts("Digite uma opção válida ! Digite '0' para continuar.. \n"); 
+                           scanf("%d",&caso10);
+                               
                       }
                       
                       break;
@@ -115,6 +121,8 @@ int main(int argc, char *argv[]) {
           				          printf("Álvaro Dias = %d \n",Alvaro);
           				          printf("Guilherme Boulos = %d \n",Boulos);
           				          printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+          				          puts("Aperte '0' para retornar para a votação");
+          				          scanf("%d",&caso11);
                 			 }
                 		  	 else if (haddad > bolsonaro && haddad > Ciro && haddad > Amoedo && haddad > Marina && haddad > Alckimin && haddad > Alvaro && haddad > Boulos && haddad > Daciolo)  {
            				          printf("Haddad é o vencedor ! \n\n");
@@ -127,6 +135,8 @@ int main(int argc, char *argv[]) {
           				          printf("Álvaro Dias = %d \n",Alvaro);
           				          printf("Guilherme Boulos = %d \n",Boulos);
           				          printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+          				          puts("Aperte '0' para retornar para a votação");
+          				          scanf("%d",&caso11);
                 			 }
                 			 else if (Ciro > bolsonaro && Ciro > haddad && Ciro > Amoedo && Ciro > Marina && Ciro > Alckimin && Ciro > Alvaro && Ciro > Boulos && Ciro > Daciolo) {
                                   printf("Ciro é o vencedor ! \n\n");
@@ -139,6 +149,8 @@ int main(int argc, char *argv[]) {
           				          printf("Álvaro Dias = %d \n",Alvaro);
           				          printf("Guilherme Boulos = %d \n",Boulos);
           				          printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+          				          puts("Aperte '0' para retornar para a votação");
+          				          scanf("%d",&caso11);
                                   }
                               else if (Amoedo > bolsonaro && Amoedo > haddad && Amoedo > Ciro && Amoedo > Marina && Amoedo > Alckimin && Amoedo > Alvaro && Amoedo > Boulos && Amoedo > Daciolo) {
                                   printf("Amoedo é o vencedor ! \n\n");
@@ -151,6 +163,8 @@ int main(int argc, char *argv[]) {
           				          printf("Álvaro Dias = %d \n",Alvaro);
           				          printf("Guilherme Boulos = %d \n",Boulos);
           				          printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+          				          puts("Aperte '0' para retornar para a votação");
+          				          scanf("%d",&caso11);
                               }
             			 
             			 
@@ -158,7 +172,8 @@ int main(int argc, char *argv[]) {
                       }
                       
                       else {
-                           puts("Senha incorreta.\n");     
+                           puts("Senha incorreta ! Digite '0' para continuar..\n");
+                           scanf("%d",&caso11);     
                       }
                	      
                	      break;
