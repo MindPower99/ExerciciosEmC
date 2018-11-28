@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
 	char SenhaMesario[] = "senhamesario";
 	char SenhaChefeDeUrna[] = "senhachefedeurna";
 	char SenhaC[25];
+	char SenhaM[15];
 	
 	puts("======================== Urna Eletrônica ==========================\n");
 	
@@ -24,6 +25,10 @@ int main(int argc, char *argv[]) {
 				while (i1 == 0) {
 					
 					do {
+                        puts("Digite a senha para iniciar a votação..");
+                        scanf("%s",&SenhaM);
+                        
+                        if (strcmp(SenhaM,SenhaMesario)==0) {
 						
 						puts("\n\nDigite o número correspondente a seu candidato: \n 1 - Bolsonaro \n 2 - Haddad \n 3 - Ciro \n 4 - Amoedo \n 5 - Marina \n 6 - Alckimin \n 7 - Álvaro Dias \n 8 - Boulos \n 9 - Daciolo \n");
 						scanf("%d",&voto);
@@ -78,16 +83,15 @@ int main(int argc, char *argv[]) {
 				                      scanf("%d",&certeza);
 				                      
 				                      if (certeza == 1) {
-				                                  char SenhaM[15];
 				                                  do {
 				                                  puts("Digite sua senha, para encerrar a votação: ");
-				                                  scanf("%s",&SenhaM);
+				                                  scanf("%s",&SenhaC);
 				                                  
 				                                  
-				                                  if (strcmp(SenhaM,SenhaMesario)==0) {
+				                                  if (strcmp(SenhaC,SenhaChefeDeUrna)==0) {
 				                                     puts("Encerrando a votação ! Aperte '0' para confirmar.. \n");
 				                                     scanf("%d",&caso10);
-													 i3--;	
+													 //i3--;	
 				                                     i2++;
 													 i1++;           
 				                                  }
@@ -268,10 +272,14 @@ int main(int argc, char *argv[]) {
 				    			default: 
 				    				puts("Digite uma opção válida \n"); 
 				   				}
-				   				
+                       }
+  				       else {
+                            puts("\nSenha incorreta ! Digite uma senha válida..\n");
+                            }
 						
 					} while (i2 < 1);
-				}
+				} 
+                
 			}
 			else {
 				puts("Senha inválida. Digite novamente..\n");
