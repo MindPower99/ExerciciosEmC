@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
         				    				break;
         				    				
         				    			case 2: 
-                                             puts("Você votou em Haddad. Digite 'OK' para confirmar seu voto: ");
+                                             puts("Você votou em Fernando Haddad. Digite 'OK' para confirmar seu voto: ");
                                              scanf("%s",&confirma);
                                              
                                              if(strcmp(confirma,"ok")==0) {
@@ -70,38 +70,101 @@ int main(int argc, char *argv[]) {
         				    				break;
         				    				
         				    			case 3:
-        				    				Ciro += 1;
-        				    				puts("Seu voto foi computado ! \n");
+                                             puts("Você votou em Ciro Gomes. Digite 'OK' para confirmar seu voto: ");
+                                             scanf("%s",&confirma);
+                                             
+                                             if(strcmp(confirma,"ok")==0) {
+            				    				Ciro += 1;
+            				    				puts("Seu voto foi computado ! \n");
+            				    				ConfirmaVoto++;
+                                             }
+                                             else {
+                                                  puts("Voltando processo de votação..\n");     
+                                             }
         				    				break;
         				    				
         				    			case 4:
-        				    				Amoedo += 1;
-        				    				puts("Seu voto foi computado ! \n");
+                                             puts("Você votou em João Amoedo. Digite 'OK' para confirmar seu voto: ");
+                                             scanf("%s",&confirma);
+                                             
+                                             if(strcmp(confirma,"ok")==0) {
+            				    				Amoedo += 1;
+            				    				puts("Seu voto foi computado ! \n");
+            				    				ConfirmaVoto++;
+                                             }
+                                             else {
+                                                  puts("Voltando com o processo de votação..\n");     
+                                             }
         				    				break;
         				    				
         				    			case 5:
-        				                     Marina += 1;
-        				                     puts("Seu voto foi computado ! \n");
+                                             puts("Você votou em Marina Silva. Digite 'OK' para confirmar seu voto: ");
+                                             scanf("%s",&confirma);
+                                             
+                                             if(strcmp(confirma,"ok")==0) {
+            				                     Marina += 1;
+            				                     puts("Seu voto foi computado ! \n");
+            				                     ConfirmaVoto++;
+                                             }
+                                             else {
+                                                  puts("Voltando processo de votação..\n");     
+                                             }
         				                     break;
         				                 
         				                 case 6:
-        				                      Alckimin +=1;
-        				                      puts("Seu voto foi computado ! \n");
+                                              puts("Você votou em Geraldo Alckimin. Digite 'OK' para confirmar seu voto: ");
+                                              scanf("%s",&confirma);
+                                              
+                                              if(strcmp(confirma,"ok")==0) {
+            				                      Alckimin +=1;
+            				                      puts("Seu voto foi computado ! \n");
+            				                      ConfirmaVoto++;
+                                              }
+                                              else {
+                                                   puts("Voltando processo de votação..\n");     
+                                              }
         				                      break;
         				                      
         				                 case 7:
-        				                      Alvaro +=1;
-        				                      puts("Seu voto foi computado ! \n");
+                                              puts("Você votou em Álvaro Dias. Digite 'OK' para confirmar seu voto: ");
+                                              scanf("%s",&confirma);
+                                              
+                                              if(strcmp(confirma,"ok")==0) {
+            				                      Alvaro +=1;
+            				                      puts("Seu voto foi computado ! \n");
+            				                      ConfirmaVoto++;
+                                              }
+                                              else {
+                                                   puts("Voltando processo de votação..\n");     
+                                              }
         				                      break;
         				                      
         				                 case 8:
-        				                      Boulos +=1;
-        				                      puts("Seu voto foi computado ! \n");
+                                              puts("Você votou em Guilherme Boulos. Digite 'OK' para confirmar seu voto: ");
+                                              scanf("%s",&confirma);
+                                              
+                                              if(strcmp(confirma,"ok")==0) {
+            				                      Boulos +=1;
+            				                      puts("Seu voto foi computado ! \n");
+            				                      ConfirmaVoto++;
+                                              }
+                                              else {
+                                                   puts("Voltando processo de votação..\n");     
+                                              }
         				                      break;
         				                      
         				                 case 9:
-        				                      Daciolo +=1;
-        				                      puts("Seu voto foi computado ! \n");
+                                              puts("Você votou em Cabo Daciolo. Digite 'OK' para confirmar seu voto: ");
+                                              scanf("%s",&confirma);
+                                              
+                                              if(strcmp(confirma,"ok")==0) {
+            				                      Daciolo +=1;
+            				                      puts("Seu voto foi computado ! \n");
+            				                      ConfirmaVoto++;
+                                              }
+                                              else {
+                                                   puts("Voltando processo de votação..\n");
+                                              }
         				                      break;
         				                      
         				                 case 10:
