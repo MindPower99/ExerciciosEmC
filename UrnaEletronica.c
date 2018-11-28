@@ -87,7 +87,7 @@ int main(int argc, char *argv[]) {
 				                                  if (strcmp(SenhaM,SenhaMesario)==0) {
 				                                     puts("Encerrando a votação ! Aperte '0' para confirmar.. \n");
 				                                     scanf("%d",&caso10);
-													 i3--;  
+													 i3--;	
 				                                     i2++;
 													 i1++;           
 				                                  }
