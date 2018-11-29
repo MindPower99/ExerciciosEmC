@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+/* 	Autor: Gabriel Nascimento
+   	Problema: Crie um algoritmo que receba a idade
+	de 5 nadadores e os classifique de acordo com sua categoria:
+            Infantil A- De 5 a 7 anos
+            Infantil B- De 8 a 10 anos
+            Juvenil A- De 11 a 13 anos
+            Juvenil B- De 14 a 17 anos
+            Senior - A partir de 18 anos
+*/
 
 int main(int argc, char *argv[]) {	
 	setlocale(LC_ALL,"Portuguese");
