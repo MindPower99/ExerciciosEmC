@@ -182,6 +182,7 @@ int main(int argc, char *argv[]) {
         				                                     scanf("%d",&caso10);
         													 //i3--;	
         				                                     i2++;
+        				                                     ConfirmaVoto++;
         													 i1++;           
         				                                  }
         				                                  else {
@@ -347,6 +348,21 @@ int main(int argc, char *argv[]) {
         					          				        puts("Aperte '0' para retornar para a votação");
         					          				    	scanf("%d",&caso11);
         											  }
+        											  
+        											  else if (bolsonaro == 0 && haddad == 0 && Ciro == 0 && Amoedo == 0 && Marina == 0 && Alckimin == 0 && Alvaro == 0 && Boulos == 0 && Daciolo == 0) {
+        											  		printf("Votação ainda não inicializada ! \n\n");
+        				           				         	printf("Jair Bolsonaro = %d \n",bolsonaro);
+        					                                printf("Fernando Haddad = %d \n",haddad);
+        					          				        printf("Ciro Gomes = %d \n",Ciro);
+        					          				        printf("João Amoedo = %d \n",Amoedo);
+        					          				        printf("Marina Silva = %d \n",Marina);
+        					          				        printf("Geraldo Alckimin = %d \n",Alckimin);
+        					          				        printf("Álvaro Dias = %d \n",Alvaro);
+        					          				        printf("Guilherme Boulos = %d \n",Boulos);
+        					          				        printf("Cabo Daciolo = %d \n\n\n",Daciolo);
+        					          				        puts("Aperte '0' para retornar para a votação");
+        					          				    	scanf("%d",&caso11);
+													  }
         				            			 
         				            			 
         				                                                                 
