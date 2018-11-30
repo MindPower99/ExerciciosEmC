@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
-	puts("=============Eleições para presidente =============\n");
+	puts("======================== Eleições para presidente ==========================\n");
 	int opcao,voto,ConfirmaVoto = 0,bolsonaro = 0, haddad = 0, Ciro = 0, Amoedo = 0, Marina = 0, Alckimin = 0,Alvaro = 0, Boulos = 0, Daciolo = 0,i1 = 0,i2 = 0,i3 = 0,certeza,limiterros = 0,caso10, caso11;
 	char SenhaMesario[] = "senhamesario";
 	char SenhaChefeDeUrna[] = "senhachefedeurna";
@@ -15,11 +15,13 @@ int main(int argc, char *argv[]) {
 	char SenhaM[15];
 	char confirma[10];
 	
-	puts("======================== Urna Eletrônica ==========================\n");
+	
 	
 	while (i3 == 0) {
+    puts("======================== Urna Eletrônica ==========================\n");
 	puts("Senha do chefe de urna: ");
 	scanf("%s",&SenhaC);
+	system("CLS");
 	
 		if (strcmp(SenhaC,SenhaChefeDeUrna)==0) {
 			i3++;
@@ -29,13 +31,15 @@ int main(int argc, char *argv[]) {
                         if (ConfirmaVoto > 0) {
                            ConfirmaVoto--;                 
                         }
+                        puts("======================== Urna Eletrônica ==========================\n");
                         puts("Digite a senha para iniciar a votação..");
                         scanf("%s",&SenhaM);
+                        system("CLS");
                         
                         if (strcmp(SenhaM,SenhaMesario)==0) {
 						
 						while(ConfirmaVoto == 0) {
-                                           
+                                puts("======================== Urna Eletrônica ==========================\n");
         						puts("\n\nDigite o número correspondente a seu candidato: \n 1 - Bolsonaro \n 2 - Haddad \n 3 - Ciro \n 4 - Amoedo \n 5 - Marina \n 6 - Alckimin \n 7 - Álvaro Dias \n 8 - Boulos \n 9 - Daciolo \n");
         						scanf("%d",&voto);
         						switch(voto) {
@@ -47,14 +51,17 @@ int main(int argc, char *argv[]) {
           				                        bolsonaro += 1;
         			    				        puts("Seu voto foi computado ! \n");
         			    				        ConfirmaVoto++;
+        			    				        system("CLS");
         			    				     
                                              }
                                              else {
-                                                  puts("Voltando processo de votação..\n");     
+                                                  puts("Voltando processo de votação..\n");
+                                                  system("CLS");     
                                              }
         				    				break;
         				    				
         				    			case 2: 
+                                             puts("======================== Urna Eletrônica ==========================\n");
                                              puts("Você votou em Fernando Haddad. Digite 'OK' para confirmar seu voto: ");
                                              scanf("%s",&confirma);
                                              
@@ -62,14 +69,17 @@ int main(int argc, char *argv[]) {
                                                  haddad += 1;
        				    				         puts("Seu voto foi computado ! \n");
        				    				         ConfirmaVoto++;
+       				    				         system("CLS");
        				    				         
                                              }
                                              else {
-                                                  puts("Voltando processo de votação..\n");     
+                                                  puts("Voltando processo de votação..\n"); 
+                                                  system("CLS");    
                                              }
         				    				break;
         				    				
         				    			case 3:
+                                             puts("======================== Urna Eletrônica ==========================\n");
                                              puts("Você votou em Ciro Gomes. Digite 'OK' para confirmar seu voto: ");
                                              scanf("%s",&confirma);
                                              
@@ -77,13 +87,16 @@ int main(int argc, char *argv[]) {
             				    				Ciro += 1;
             				    				puts("Seu voto foi computado ! \n");
             				    				ConfirmaVoto++;
+            				    				system("CLS");
                                              }
                                              else {
-                                                  puts("Voltando processo de votação..\n");     
+                                                  puts("Voltando processo de votação..\n");
+                                                  system("CLS");
                                              }
         				    				break;
         				    				
         				    			case 4:
+                                             puts("======================== Urna Eletrônica ==========================\n");
                                              puts("Você votou em João Amoedo. Digite 'OK' para confirmar seu voto: ");
                                              scanf("%s",&confirma);
                                              
@@ -91,13 +104,16 @@ int main(int argc, char *argv[]) {
             				    				Amoedo += 1;
             				    				puts("Seu voto foi computado ! \n");
             				    				ConfirmaVoto++;
+            				    				system("CLS");
                                              }
                                              else {
-                                                  puts("Voltando com o processo de votação..\n");     
+                                                  puts("Voltando com o processo de votação..\n");
+                                                  system("CLS");    
                                              }
         				    				break;
         				    				
         				    			case 5:
+                                             puts("======================== Urna Eletrônica ==========================\n");
                                              puts("Você votou em Marina Silva. Digite 'OK' para confirmar seu voto: ");
                                              scanf("%s",&confirma);
                                              
@@ -105,13 +121,16 @@ int main(int argc, char *argv[]) {
             				                     Marina += 1;
             				                     puts("Seu voto foi computado ! \n");
             				                     ConfirmaVoto++;
+            				                     system("CLS");
                                              }
                                              else {
-                                                  puts("Voltando processo de votação..\n");     
+                                                  puts("Voltando processo de votação..\n"); 
+                                                  system("CLS");    
                                              }
         				                     break;
         				                 
         				                 case 6:
+                                              puts("======================== Urna Eletrônica ==========================\n");
                                               puts("Você votou em Geraldo Alckimin. Digite 'OK' para confirmar seu voto: ");
                                               scanf("%s",&confirma);
                                               
@@ -119,13 +138,16 @@ int main(int argc, char *argv[]) {
             				                      Alckimin +=1;
             				                      puts("Seu voto foi computado ! \n");
             				                      ConfirmaVoto++;
+            				                      system("CLS");
                                               }
                                               else {
-                                                   puts("Voltando processo de votação..\n");     
+                                                   puts("Voltando processo de votação..\n");
+                                                   system("CLS");     
                                               }
         				                      break;
         				                      
         				                 case 7:
+                                              puts("======================== Urna Eletrônica ==========================\n");
                                               puts("Você votou em Álvaro Dias. Digite 'OK' para confirmar seu voto: ");
                                               scanf("%s",&confirma);
                                               
@@ -133,13 +155,16 @@ int main(int argc, char *argv[]) {
             				                      Alvaro +=1;
             				                      puts("Seu voto foi computado ! \n");
             				                      ConfirmaVoto++;
+            				                      system("CLS");
                                               }
                                               else {
-                                                   puts("Voltando processo de votação..\n");     
+                                                   puts("Voltando processo de votação..\n");  
+                                                   system("CLS");   
                                               }
         				                      break;
         				                      
         				                 case 8:
+                                              puts("======================== Urna Eletrônica ==========================\n");
                                               puts("Você votou em Guilherme Boulos. Digite 'OK' para confirmar seu voto: ");
                                               scanf("%s",&confirma);
                                               
@@ -147,13 +172,16 @@ int main(int argc, char *argv[]) {
             				                      Boulos +=1;
             				                      puts("Seu voto foi computado ! \n");
             				                      ConfirmaVoto++;
+            				                      system("CLS");
                                               }
                                               else {
-                                                   puts("Voltando processo de votação..\n");     
+                                                   puts("Voltando processo de votação..\n");
+                                                   system("CLS");     
                                               }
         				                      break;
         				                      
         				                 case 9:
+                                              puts("======================== Urna Eletrônica ==========================\n");
                                               puts("Você votou em Cabo Daciolo. Digite 'OK' para confirmar seu voto: ");
                                               scanf("%s",&confirma);
                                               
@@ -161,13 +189,16 @@ int main(int argc, char *argv[]) {
             				                      Daciolo +=1;
             				                      puts("Seu voto foi computado ! \n");
             				                      ConfirmaVoto++;
+            				                      system("CLS");
                                               }
                                               else {
                                                    puts("Voltando processo de votação..\n");
+                                                   system("CLS");
                                               }
         				                      break;
         				                      
         				                 case 10:
+                                              puts("======================== Urna Eletrônica ==========================\n");
         				                      puts("Tem certeza que deseja encerrar a votação ? \n 1 - Sim \n 2 - Não \n");
         				                      scanf("%d",&certeza);
         				                      
