@@ -11,6 +11,7 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	int i,i2,n[10];
+	puts("================== Trabalhando com Vetor ====================\n");
 	for (i = 0; i < 10; i++) {
 		printf("Digite o %d numero: \n",i+1);
 		scanf("%d",&n[i]);
@@ -20,5 +21,6 @@ int main(int argc, char *argv[]) {
 	for (i2 = 0; i2 < 10; i2++) {
 		printf("Número %d: %d \n",i+=1,n[i2]);
 	}	
+	system("PAUSE");
 	return 0;
 }
