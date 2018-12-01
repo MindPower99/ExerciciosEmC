@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
+
 int main(){
-	char nome[8];
+	char nome[16];
 	float nota[4], soma, media;
 	int I;
 	setlocale(LC_ALL, "Portuguese");
@@ -15,12 +16,12 @@ int main(){
 	}
 	puts("\n****Calculando a média****\n");
 	for(I=1;I<=4;I++){
-	printf("A %dª nota: %.1f\n ",I, nota[I]);
-	soma=soma+nota[I];
+	printf("A %dª nota: %2.f\n ",I, nota[I]);
 	}
+	soma = nota[1] + nota[2] + nota[3] + nota[4]; 
 	media=soma/4;
 	printf("\n Aluno: %s", nome);
-	printf("\n A média do aluno: %.1f\n\n", media);
+	printf("\n A média do aluno: %2.f\n\n", media);
 	system("PAUSE");
     return 0;	
 }
