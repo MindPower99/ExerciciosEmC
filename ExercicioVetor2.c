@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
+
 /* 	Autor: Gabriel Jorge
 	Problema: Ler 10 elementos de um vetor A e a partir
 	do índice, verificar se o índice é par, ser for multiplique
@@ -12,13 +13,32 @@
 
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
-	float VetorA[10];
-	float VetorB[10];
+	int VetorA[10];
+	int VetorB[10];
+	int resto;
 	int i;
 	
 	for (i = 1; i < 11;i++) {
 		printf("Digite o %dº número: \n",i);
-		scanf("%f",&VetorA[i]);
+		scanf("%d",&VetorA[i]);
+		resto = VetorA[i];
+		resto = resto % 2;
+		if (resto == 0) {
+            VetorB[i] = VetorA[i] * 5;       
+        }
+        else {
+            VetorB[i] = VetorA[i] + 5;     
+        }
 	}
+    for (i = 1; i < 11; i++) {
+        printf("O %dº valor do VetorA é: %d\n",i,VetorA[i]);
+    } 
+    puts("");
+    puts("");
+    for (i = 1; i < 11; i++) {
+        printf("O %d valor do VetorB é: %d\n",i,VetorB[i]);   
+    }
+    system("PAUSE");
+	
 	return 0;
 }
