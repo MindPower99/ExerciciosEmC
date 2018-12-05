@@ -8,7 +8,7 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "portuguese");
 	puts("======================== Eleições para presidente ==========================\n");
-	int opcao,voto,ConfirmaVoto = 0,bolsonaro = 0, haddad = 0, Ciro = 0, Amoedo = 0, Marina = 0, Alckimin = 0,Alvaro = 0, Boulos = 0, Daciolo = 0,i1 = 0,i2 = 0,i3 = 0,certeza,limiterros = 0,caso10, caso11;
+	int opcao,voto,ConfirmaVoto = 0,bolsonaro = 0, haddad = 0, Ciro = 0, Amoedo = 0, Marina = 0, Alckimin = 0,Alvaro = 0, Boulos = 0, Daciolo = 0,i1 = 0,i2 = 0,i3 = 0,i4 = 0,i5 = 0,certeza,limiterros = 0,caso10, caso11;
 	char SenhaMesario[] = "senhamesario";
 	char SenhaChefeDeUrna[] = "senhachefedeurna";
 	char SenhaC[25];
@@ -422,41 +422,49 @@ int main(int argc, char *argv[]) {
         				               	      break;
         				               	      
    	                                    case 12: 
-                                             puts("============ Alterar Senha-Mesário ==================\n");
-                                             
-                                             printf("Senha do Chefe de Urna: ");
-                                             scanf("%s",&SenhaC);
-                                             
-                                             if(strcmp(SenhaC,SenhaChefeDeUrna)==0) {
-                                                system("CLS");
-                                                puts("============ Alterar Senha-Mesário ==================\n"); 
-                                                printf("Digite a senha de Mesário atual: ");
-                                                scanf("%s",&SenhaM);
-                                                
-                                                if (strcmp(SenhaM,SenhaMesario)==0) {
-                                                    char Senhacmp1[25],Senhacmp2[25];
-                                                    printf("\n\nDigite a nova Senha: ");
-                                                    scanf("%s",&Senhacmp1);
-                                                    printf("\n\nDigite denovo a nova senha: ");
-                                                    scanf("%s",&Senhacmp2);
-                                                    
-                                                    if(strcmp(Senhacmp1,Senhacmp2)==0) {                       
-                                                        system("CLS");
-                                                        strcpy(SenhaMesario,Senhacmp2);
-                                                        puts("\nSenha alterada com sucesso !");
-                                                        system("PAUSE");                               
-                                                    }
-                                                    else {
-                                                         system("CLS");
-                                                         puts("As senhas não conferem !");     
-                                                    }                                     
-                                                }     
-                                                
-                                                else {
+                                             do {
+                                                 puts("============ Alterar Senha-Mesário ==================\n");
+                                                         
+                                                 printf("Senha do Chefe de Urna: ");
+                                                 scanf("%s",&SenhaC);
+                                                         
+                                                 if(strcmp(SenhaC,SenhaChefeDeUrna)==0) {
+                                                 system("CLS");
+                                                 
+                                                 do {
+                                                 
+                                                 puts("============ Alterar Senha-Mesário ==================\n"); 
+                                                 printf("Digite a senha de Mesário atual: ");
+                                                 scanf("%s",&SenhaM);
+                                                            
+                                                 if (strcmp(SenhaM,SenhaMesario)==0) {
+                                                 char Senhacmp1[25],Senhacmp2[25];
+                                                 printf("\n\nDigite a nova Senha: ");
+                                                 scanf("%s",&Senhacmp1);
+                                                 printf("\n\nDigite denovo a nova senha: ");
+                                                 scanf("%s",&Senhacmp2);
+                                                                        
+                                                          if(strcmp(Senhacmp1,Senhacmp2)==0) {                       
+                                                          system("CLS");
+                                                          strcpy(SenhaMesario,Senhacmp2);
+                                                          puts("\nSenha alterada com sucesso !");
+                                                          i4++;
+                                                          i5++;
+                                                          system("PAUSE");                               
+                                                          }
+                                                          else {
+                                                          system("CLS");
+                                                          puts("As senhas não conferem !");     
+                                                          }    
+                                                 }     
+                                                 }while(i5 == 0); 
+                                                 }
+                                                  else {
                                                      puts("Senha Incorreta !");
                                                      system("CLS");
-                                                }                    
-                                             }
+                                                  }
+                                                }while(i4 == 0);                    
+                                             break;
         				    			default: 
         				    				puts("Digite uma opção válida \n"); 
         				   				}
