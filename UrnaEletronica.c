@@ -199,6 +199,7 @@ int main(int argc, char *argv[]) {
         				                      
         				                 case 10:
                                               puts("======================== Urna Eletrônica ==========================\n");
+                                              system("CLS");
         				                      puts("Tem certeza que deseja encerrar a votação ? \n 1 - Sim \n 2 - Não \n");
         				                      scanf("%d",&certeza);
         				                      
@@ -419,6 +420,37 @@ int main(int argc, char *argv[]) {
         				                      }
         				               	      
         				               	      break;
+        				               	      
+   	                                    case 12: 
+                                             puts("============ Alterar Senha-Mesário ==================\n");
+                                             
+                                             printf("Senha do Chefe de Urna: ");
+                                             scanf("%s",&SenhaC);
+                                             
+                                             if(strcmp(SenhaC,SenhaChefeDeUrna)==0) {
+                                                system("CLS");
+                                                puts("============ Alterar Senha-Mesário ==================\n"); 
+                                                printf("Digite a senha de Mesário atual: ");
+                                                scanf("%s",&SenhaM);
+                                                
+                                                if (strcmp(SenhaM,SenhaMesario)==0) {
+                                                    char Senhacmp[25];
+                                                    printf("\n\nDigite a nova Senha: ");
+                                                    scanf("%s",&SenhaM);
+                                                    printf("\n\nDigite denovo a nova senha: ");
+                                                    scanf("%s",&Senhacmp);
+                                                    
+                                                    if(strcmp(SenhaM,Senhacmp)==0) {
+                                                        system("CLS");
+                                                        puts("\nSenha alterada com sucesso !");
+                                                        system("PAUSE");                               
+                                                    }
+                                                    else {
+                                                         system("CLS");
+                                                         puts("As senhas não conferem !");     
+                                                    }                                     
+                                                }                         
+                                             }
         				    			default: 
         				    				puts("Digite uma opção válida \n"); 
         				   				}
