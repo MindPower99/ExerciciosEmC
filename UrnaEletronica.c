@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 	char SenhaMesario[] = "senhamesario";
 	char SenhaChefeDeUrna[] = "senhachefedeurna";
 	char SenhaC[25];
-	char SenhaM[15];
+	char SenhaM[25];
 	char confirma[10];
 	
 	
@@ -434,14 +434,15 @@ int main(int argc, char *argv[]) {
                                                 scanf("%s",&SenhaM);
                                                 
                                                 if (strcmp(SenhaM,SenhaMesario)==0) {
-                                                    char Senhacmp[25];
+                                                    char Senhacmp1[25],Senhacmp2[25];
                                                     printf("\n\nDigite a nova Senha: ");
-                                                    scanf("%s",&SenhaM);
+                                                    scanf("%s",&Senhacmp1);
                                                     printf("\n\nDigite denovo a nova senha: ");
-                                                    scanf("%s",&Senhacmp);
+                                                    scanf("%s",&Senhacmp2);
                                                     
-                                                    if(strcmp(SenhaM,Senhacmp)==0) {
+                                                    if(strcmp(Senhacmp1,Senhacmp2)==0) {                       
                                                         system("CLS");
+                                                        strcpy(SenhaMesario,Senhacmp2);
                                                         puts("\nSenha alterada com sucesso !");
                                                         system("PAUSE");                               
                                                     }
@@ -449,7 +450,12 @@ int main(int argc, char *argv[]) {
                                                          system("CLS");
                                                          puts("As senhas não conferem !");     
                                                     }                                     
-                                                }                         
+                                                }     
+                                                
+                                                else {
+                                                     puts("Senha Incorreta !");
+                                                     system("CLS");
+                                                }                    
                                              }
         				    			default: 
         				    				puts("Digite uma opção válida \n"); 
