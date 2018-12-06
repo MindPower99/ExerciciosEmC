@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 	
 	while (i == 0) {
 		puts("==================== Prova de lógica de programação ====================\n");
-		printf("1 - Votar \n2 - Encerrar Votação.\n3 - Registrar participante\n");
+		printf("1 - Votar \n2 - Encerrar Votação.\n3 - Registrar participante\n4 - Conferir resultado da votação\n");
 		scanf("%d",&opcao);
 		
 		
@@ -152,9 +152,8 @@ int main(int argc, char *argv[]) {
 			if (certeza == 1) {
 				system("CLS");
 				system("COLOR 70");
-				printf("\n\n\n\n\n                         Encerrando o programa \n\n\n\n\n");
+				printf("\n\nEncerrando o programa \n\n");
 				i++;
-				system("PAUSE");
 				system("CLS");
 			}
 			
@@ -189,99 +188,107 @@ int main(int argc, char *argv[]) {
 					else if (SexoParticipante != 1 && SexoParticipante != 2) {
 						puts("Digite uma opção válida");
 					}
-			
-			
-		}
+					
+			}
 		
-		else if (opcao != 1 && opcao != 2) {
+		else if (opcao == 4) {
+			system("CLS");
+			puts("============================= Resultado ================================\n");
+			system("COLOR 70");
+			printf("quantidade de participantes do sexo feminino: %d\n", FemininoParticipante);
+			printf("quantidade de participantes do sexo masculino: %d\n", MasculinoParticipante);
+			
+			if (Malabarista > Trapezista && Malabarista > Magico && Malabarista > Palhaco) {
+				puts("A atração malabarista foi a mais apreciada por todos !");
+				PorcentagemAprovacao = (Malabarista / (Feminino + Masculino))* 100;
+				printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
+			}
+			
+			else if (Trapezista > Malabarista && Trapezista > Magico && Trapezista > Palhaco) {
+				puts("A atração Trapezista foi a mais apreciada por todos !");
+				PorcentagemAprovacao = (Trapezista / (Feminino + Masculino))* 100;
+				printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
+			}
+			
+			else if (Magico > Trapezista && Magico > Malabarista && Magico > Palhaco) {
+				puts("A atração Mágico foi a mais apreciada por todos !");
+				PorcentagemAprovacao = (Magico / (Feminino + Masculino))* 100;
+				printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
+			}
+			
+			else if (Palhaco > Malabarista && Palhaco > Trapezista && Palhaco > Magico) {
+				puts("A atração Palhaço foi a mais apreciada por todos !");
+				PorcentagemAprovacao = (Palhaco / (Feminino + Masculino))* 100;
+				printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
+			}
+			
+			else if (Malabarista == Trapezista && Malabarista > Magico && Malabarista > Palhaco ) {
+				puts("As atrações Trapezista e Malabarista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
+			}
+			else if (Malabarista > Trapezista && Malabarista == Magico && Malabarista > Palhaco ) {
+				puts("As atrações Magico e Malabarista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
+			}
+			else if (Malabarista > Trapezista && Malabarista > Magico && Malabarista == Palhaco ) {
+				puts("As atrações Palhaco e Malabarista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
+			}
+			else if (Magico == Trapezista && Magico > Malabarista && Magico > Palhaco) {
+				puts("As atrações Trapezista e Mágico tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
+			}
+			else if (Magico > Trapezista && Magico >Malabarista && Magico == Palhaco) {
+				puts("As atrações Palhaco e Mágico tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
+			}
+			else if (Palhaco > Malabarista && Palhaco == Trapezista && Palhaco > Magico) {
+				puts("As atrações Palhaco e Trapezista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
+			}
+		
+			
+			if (MalabaristaFem > TrapezistaFem && MalabaristaFem > MagicoFem && MalabaristaFem > PalhacoFem) {
+				puts("A atração malabarista foi a mais apreciada pelas mulheres !\n");
+			}
+			
+			else if (TrapezistaFem > MalabaristaFem && TrapezistaFem > MagicoFem && TrapezistaFem > PalhacoFem) {
+				puts("A atração Trapezista foi a mais apreciada pelas mulheres!\n");
+			}
+			
+			else if (MagicoFem > TrapezistaFem && MagicoFem > MalabaristaFem && MagicoFem > PalhacoFem) {
+				puts("A atração Mágico foi a mais apreciada pelas mulheres !\n");
+			}
+			
+			else if (PalhacoFem > MalabaristaFem && PalhacoFem > TrapezistaFem && PalhacoFem > MagicoFem) {
+				puts("A atração Palhaço foi a mais apreciada pelas mulheres !\n");
+			}
+			
+			//
+			
+			else if (MalabaristaFem == TrapezistaFem && MalabaristaFem > MagicoFem && MalabaristaFem > PalhacoFem ) {
+				puts("As atrações Trapezista e Malabarista foram as mais apreciadas pelas mulheres !\n ");
+			}
+			else if (MalabaristaFem > TrapezistaFem && MalabaristaFem == MagicoFem && MalabaristaFem > PalhacoFem ) {
+				puts("As atrações Magico e Malabarista foram as mais apreciadas pelas mulheres !\n ");
+			}
+			else if (MalabaristaFem > TrapezistaFem && MalabaristaFem > MagicoFem && MalabaristaFem == PalhacoFem ) {
+				puts("As atrações Palhaco e Malabarista foram as mais apreciadas pelas mulheres !\n ");
+			}
+			else if (MagicoFem == TrapezistaFem && MagicoFem > MalabaristaFem && MagicoFem > PalhacoFem) {
+				puts("As atrações Trapezista e Mágico foram as mais apreciadas pelas mulheres !\n ");
+			}
+			else if (MagicoFem > TrapezistaFem && MagicoFem >MalabaristaFem && MagicoFem == PalhacoFem) {
+				puts("As atrações Palhaco e Mágico foram as mais apreciadas pelas mulheres !\n ");
+			}
+			else if (PalhacoFem > MalabaristaFem && PalhacoFem == TrapezistaFem && PalhacoFem > MagicoFem) {
+				puts("As atrações Palhaco e Trapezista foram as mais apreciadas pelas mulheres !\n ");
+			}
+			system("PAUSE");
+			system("CLS");
+		}
+			
+			
+		
+		else if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4) {
 			puts("Opção inválida.\n");
 		}
 	}
-	puts("============================= Fim ================================\n");
-	system("COLOR 40");
-	printf("quantidade de participantes do sexo feminino: %d\n", FemininoParticipante);
-	printf("quantidade de participantes do sexo masculino: %d\n", MasculinoParticipante);
 	
-	if (Malabarista > Trapezista && Malabarista > Magico && Malabarista > Palhaco) {
-		puts("A atração malabarista foi a mais apreciada por todos !");
-		PorcentagemAprovacao = (Malabarista / (Feminino + Masculino))* 100;
-		printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
-	}
-	
-	else if (Trapezista > Malabarista && Trapezista > Magico && Trapezista > Palhaco) {
-		puts("A atração Trapezista foi a mais apreciada por todos !");
-		PorcentagemAprovacao = (Trapezista / (Feminino + Masculino))* 100;
-		printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
-	}
-	
-	else if (Magico > Trapezista && Magico > Malabarista && Magico > Palhaco) {
-		puts("A atração Mágico foi a mais apreciada por todos !");
-		PorcentagemAprovacao = (Magico / (Feminino + Masculino))* 100;
-		printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
-	}
-	
-	else if (Palhaco > Malabarista && Palhaco > Trapezista && Palhaco > Magico) {
-		puts("A atração Palhaço foi a mais apreciada por todos !");
-		PorcentagemAprovacao = (Palhaco / (Feminino + Masculino))* 100;
-		printf("A porcetagem de aprovação é: %2.f por cento\n",PorcentagemAprovacao);
-	}
-	
-	else if (Malabarista == Trapezista && Malabarista > Magico && Malabarista > Palhaco ) {
-		puts("As atrações Trapezista e Malabarista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
-	}
-	else if (Malabarista > Trapezista && Malabarista == Magico && Malabarista > Palhaco ) {
-		puts("As atrações Magico e Malabarista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
-	}
-	else if (Malabarista > Trapezista && Malabarista > Magico && Malabarista == Palhaco ) {
-		puts("As atrações Palhaco e Malabarista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
-	}
-	else if (Magico == Trapezista && Magico > Malabarista && Magico > Palhaco) {
-		puts("As atrações Trapezista e Mágico tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
-	}
-	else if (Magico > Trapezista && Magico >Malabarista && Magico == Palhaco) {
-		puts("As atrações Palhaco e Mágico tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
-	}
-	else if (Palhaco > Malabarista && Palhaco == Trapezista && Palhaco > Magico) {
-		puts("As atrações Palhaco e Trapezista tiveram a mesma quantidade de votos e foram as mais apreciadas por todos ! ");
-	}
-
-	
-	if (MalabaristaFem > TrapezistaFem && MalabaristaFem > MagicoFem && MalabaristaFem > PalhacoFem) {
-		puts("A atração malabarista foi a mais apreciada pelas mulheres !\n");
-	}
-	
-	else if (TrapezistaFem > MalabaristaFem && TrapezistaFem > MagicoFem && TrapezistaFem > PalhacoFem) {
-		puts("A atração Trapezista foi a mais apreciada pelas mulheres!\n");
-	}
-	
-	else if (MagicoFem > TrapezistaFem && MagicoFem > MalabaristaFem && MagicoFem > PalhacoFem) {
-		puts("A atração Mágico foi a mais apreciada pelas mulheres !\n");
-	}
-	
-	else if (PalhacoFem > MalabaristaFem && PalhacoFem > TrapezistaFem && PalhacoFem > MagicoFem) {
-		puts("A atração Palhaço foi a mais apreciada pelas mulheres !\n");
-	}
-	
-	//
-	
-	else if (MalabaristaFem == TrapezistaFem && MalabaristaFem > MagicoFem && MalabaristaFem > PalhacoFem ) {
-		puts("As atrações Trapezista e Malabarista foram as mais apreciadas pelas mulheres !\n ");
-	}
-	else if (MalabaristaFem > TrapezistaFem && MalabaristaFem == MagicoFem && MalabaristaFem > PalhacoFem ) {
-		puts("As atrações Magico e Malabarista foram as mais apreciadas pelas mulheres !\n ");
-	}
-	else if (MalabaristaFem > TrapezistaFem && MalabaristaFem > MagicoFem && MalabaristaFem == PalhacoFem ) {
-		puts("As atrações Palhaco e Malabarista foram as mais apreciadas pelas mulheres !\n ");
-	}
-	else if (MagicoFem == TrapezistaFem && MagicoFem > MalabaristaFem && MagicoFem > PalhacoFem) {
-		puts("As atrações Trapezista e Mágico foram as mais apreciadas pelas mulheres !\n ");
-	}
-	else if (MagicoFem > TrapezistaFem && MagicoFem >MalabaristaFem && MagicoFem == PalhacoFem) {
-		puts("As atrações Palhaco e Mágico foram as mais apreciadas pelas mulheres !\n ");
-	}
-	else if (PalhacoFem > MalabaristaFem && PalhacoFem == TrapezistaFem && PalhacoFem > MagicoFem) {
-		puts("As atrações Palhaco e Trapezista foram as mais apreciadas pelas mulheres !\n ");
-	}
 	
 	
 		
