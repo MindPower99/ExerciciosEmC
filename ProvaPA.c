@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 	int Malabarista = 0, Magico = 0, Trapezista = 0, Palhaco = 0, MalabaristaFem = 0, MagicoFem = 0, TrapezistaFem = 0, PalhacoFem = 0;
 	int i = 0;
 	int sexo, SexoParticipante, MasculinoParticipante = 0, FemininoParticipante = 0, Masculino = 0, Feminino = 0;
-	int opcao,voto;
+	int opcao,voto,certeza;
 	float PorcentagemAprovacao;
 	
 	while (i == 0) {
@@ -143,7 +143,33 @@ int main(int argc, char *argv[]) {
 		}
 		
 		else if (opcao == 2) {
-			i++;
+			system("CLS");
+			puts("Tem certeza que deseja encerrar o programa ?\n");
+			puts("1 - Sim\n");
+			puts("2 - Não\n");
+			scanf("%d",&certeza);
+			
+			if (certeza == 1) {
+				system("CLS");
+				system("COLOR 70");
+				printf("\n\n\n\n\n                         Encerrando o programa \n\n\n\n\n");
+				i++;
+				system("PAUSE");
+				system("CLS");
+			}
+			
+			else if (certeza == 2) {
+				puts("Voltando com o Programa...\n\n");
+				system("PAUSE");
+				system("CLS");
+			}
+			else {
+				puts("Digite uma opção válida..\n");
+				system("PAUSE");
+				system("CLS");
+			}
+			
+			
 		}
 		
 		else if(opcao == 3) {
@@ -175,7 +201,7 @@ int main(int argc, char *argv[]) {
 	system("COLOR 40");
 	printf("quantidade de participantes do sexo feminino: %d\n", FemininoParticipante);
 	printf("quantidade de participantes do sexo masculino: %d\n", MasculinoParticipante);
-	//printf("Feminino: %d e  Masculino: %d\n",Feminino, Masculino);
+	
 	if (Malabarista > Trapezista && Malabarista > Magico && Malabarista > Palhaco) {
 		puts("A atração malabarista foi a mais apreciada por todos !");
 		PorcentagemAprovacao = (Malabarista / (Feminino + Masculino))* 100;
