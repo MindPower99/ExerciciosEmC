@@ -37,11 +37,17 @@ int main(int argc, char *argv[]) {
 					if (sexo == 1) {
 						Masculino++;
 						Malabarista++;
+						puts("Você votou em Malabarista como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo == 2) {
 						Feminino++;
 						MalabaristaFem++;
 						Malabarista++;
+						puts("Você votou em Malabarista como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo != 1 && sexo != 2) {
 						puts("Digite uma opção válida");
@@ -59,11 +65,17 @@ int main(int argc, char *argv[]) {
 					if (sexo == 1) {
 						Masculino++;
 						Trapezista++;
+						puts("Você votou em Trapezista como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo == 2) {
 						Feminino++;
 						TrapezistaFem++;
 						Trapezista++;
+						puts("Você votou em Trapezista como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo != 1 && sexo != 2) {
 						puts("Digite uma opção válida");
@@ -80,11 +92,17 @@ int main(int argc, char *argv[]) {
 					if (sexo == 1) {
 						Masculino++;
 						Magico++;
+						puts("Você votou em Mágico como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo == 2) {
 						Feminino++;
 						MagicoFem++;
 						Magico++;
+						puts("Você votou em Mágico como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo != 1 && sexo != 2) {
 						puts("Digite uma opção válida");
@@ -101,11 +119,17 @@ int main(int argc, char *argv[]) {
 					if (sexo == 1) {
 						Masculino++;
 						Palhaco++;
+						puts("Você votou em Palhaco como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo == 2) {
 						Feminino++;
 						PalhacoFem++;
 						Palhaco++;
+						puts("Você votou em Palhaco como atração principal !\n");
+						system("PAUSE");
+						system("CLS");
 					}
 					else if (sexo != 1 && sexo != 2) {
 						puts("Digite uma opção válida");
