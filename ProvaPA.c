@@ -188,6 +188,7 @@ int main(int argc, char *argv[]) {
 					else if (SexoParticipante != 1 && SexoParticipante != 2) {
 						puts("Digite uma opção válida");
 					}
+					system("CLS");
 					
 			}
 		
